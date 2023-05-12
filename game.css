@@ -53,11 +53,36 @@ body {
 
 
 .fundo .container {
-    height: 570px;
+    height: 285px;
     justify-content: center;
     align-items: center;
 }
 
+/* .container .caixaImagens{
+    height: 50px;
+} */
+
+
+.caixaImagens{
+    display: flex;
+    flex-direction: row;
+}
+
+.caixaImagens2{
+    display: flex;
+    flex-direction: row;
+}
+
+.caixa{
+    padding: 4px;
+    
+}
+
+
+.caixa img{
+    width: 140px;
+    height: 210px;
+}
 
 
 
