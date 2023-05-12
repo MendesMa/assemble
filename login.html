@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assemble</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class="container">
+            <h1 class="nome">Assemble</h1>
+            <ul class="navegacao">
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="cadastro.html">Cadastro</a></li>
+                <li> <a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- fundo -->
+    <div class="fundo">
+        <div class="container"></div>
+        <div class="caixa">
+            <div class="frase"><h3>Cadastro</h3></div>
+            Usuário: <br>
+            <input id="input_usuario" type="text"> <br>
+            Senha: <br>
+            <input id="input_senha" type="password">
+            <div id="div_senha"></div> 
+            <button onclick="validar()"><link rel="stylesheet" href="game.html"> Entrar</button>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="direitos">MendesMa 2023/1</div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    function validar() {
+        
+        var senha = input_senha.value
+        var direcionar = `<link rel="stylesheet" href="game.html">`
+        
+        
+        if (senha.length < 6){
+            div_senha.innerHTML = 'A senha deve conter pelo menos 6 caracteres '            
+        }
+        
+        
+    }
+</script>

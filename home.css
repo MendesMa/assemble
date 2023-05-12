@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(./imagens/home.jpg);
+    background-size: cover;
+
+}
+
+/*header*/
+.header {
+    background-color: none;
+    border-bottom: 2px solid #98413C;
+    margin: 0;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.nome {
+    color: #18B8FD;
+    font-family: fantasy;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+
+.navegacao {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navegacao li,
+.navegacao a {
+    color: #18B8FD;
+    font-family: fantasy;
+}
+
+
+
+.fundo .container {
+    height: 570px;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixas {
+    color: #18B8FD;
+    font-family: monospace;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.caixa1 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
+}
+
+.caixa2 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 670px;
+}
+
+/*footer*/
+.footer {
+    background-color: #100A13;
+    border-top: 2px solid #98413C;
+    width: 100%;
+    height: 33px;
+    color: white;
+}
+
+.footer .container{
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
