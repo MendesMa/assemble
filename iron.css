@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 0;
+    backdrop-filter: opacity;
+    background-image: url(./imagens/avengers11.jpg);
+    background-size: 3200px;
+    background-color: white;
+    color:aliceblue;
+
+
+}
+
+
+.header {
+    background-image: url(./imagens/assemble10.jpg);
+    background-size: 80px;
+    backdrop-filter: brightness(10%);
+    border-bottom: 2px solid #98413C;
+    margin: 0;
+    height: 50px;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+
+}
+
+.header .container {
+    justify-content: space-between;
+}
+
+.nome {
+    color: #18B8FD;
+    font-family: dejavu sans mono;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    
+}
+
+
+.navegacao {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navegacao li,
+.navegacao a {
+    color: #18B8FD;
+    font-family: dejavu sans mono;
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+ }
+
+.caixa1{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.caixa1 .caixaTexto {
+    display: flex;
+    flex-direction: column;
+    font-family: dejavu sans mono;
+    color: antiquewhite;
+    font-weight: 800;
+    margin-left: 20px;
+    justify-content: center;
+    
+}
+ .caixaImagem  img{
+    height:250px;
+    width: 450px;
+    align-content: center;
+}
+
+.caixa2{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.caixa2 .caixaTexto {
+    display: flex;
+    flex-direction: column;
+    font-family: dejavu sans mono;
+    font-weight: 800;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.caixa3{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+}
+
+.caixa3 .caixaTexto {
+    display: flex;
+    flex-direction: column;
+    font-family: dejavu sans mono;
+    font-weight: 800;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+.caixa4{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 25px;
+}
+
+.caixa4 .caixaTexto {
+    display: flex;
+    flex-direction: column;
+    font-family: dejavu sans mono;
+    font-weight: 800;
+    margin-right: 20px;
+    justify-content: center;
+}
+
+.caixa5{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 25px;
+}
+
+.caixa5 .caixaTexto {
+    display: flex;
+    flex-direction: column;
+    font-family: dejavu sans mono;
+    font-weight: 800;
+    margin-left: 20px;
+    justify-content: center;
+}
+

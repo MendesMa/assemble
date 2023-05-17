@@ -1,8 +1,8 @@
 body {
     margin: 0;
     padding: 0;
-    background-image: url(./imagens/home.jpg);
-    background-size: cover;
+    background-image: url(./imagens/fundo-site.jpg);
+    background-size: 1350px;
 
 }
 
@@ -54,43 +54,45 @@ body {
 
 
 .fundo .container {
-    height: 570px;
+    margin-top: 25px;
     justify-content: center;
     align-items: center;
 }
 
-.caixas {
-    color: #18B8FD;
-    font-family: monospace;
+.textoImagens {
+    font-family: fantasy;
+    color: #98d9f5;
+    font-size: 15px;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    margin-left: 575px;
+    margin-top: 20px;
+    height: 10px;
 }
 
-
-.caixa1 {
+.caixaImagens{
     display: flex;
     flex-direction: row;
-    margin-left: 80px;
 }
 
-.caixa2 {
+.caixaImagens2{
     display: flex;
-    flex-direction: row-reverse;
-    margin-left: 670px;
+    flex-direction: row;
+    margin-top: 0;
+}
+.caixaImagens3{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
 }
 
-/*footer*/
-.footer {
-    background-color: #100A13;
-    border-top: 2px solid #98413C;
-    width: 100%;
-    height: 33px;
-    color: white;
+.caixa{
+    padding: 4px;
+    
 }
 
-.footer .container{
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+.caixa img{
+    width: 100px;
+    height: 150px;
 }
+

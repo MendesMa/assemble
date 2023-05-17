@@ -58,15 +58,15 @@
         var senha = input_senha.value
     
 
-        if (usuario = "") {
-            div_usuario.innerHTML  `Preencha este campo`
+        if (usuario == "") {
+            div_usuario.innerHTML = `Preencha este campo`
         }
-        if (!email.includes("@")) {
-            div_email.innerHTML = `O E-mail deve conter @.
+        if (!email.includes("@" && ".")) {
+            div_email.innerHTML = `O E-mail deve conter "@" e "." <br>
             Preencha corretamente`
         } 
         if (senha.length < 6){
-            div_senha.innerHTML = `A senha deve conter pelo menos 6 caracteres `            
+            div_senha.innerHTML = `A senha deve conter entre 6 e 20 caracteres `            
         } 
 
         
