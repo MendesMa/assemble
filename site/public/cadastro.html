@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="shortcut icon" type="imagex/png" href="./assets/imagens/logo.png">
     <title>Assemble</title>
 
 
@@ -20,7 +20,7 @@
         <div class="container">
             <h1 class="nome">Assemble</h1>
             <ul class="navegacao">
-                <li> <a href="home.html">Home</a></li>
+                <li> <a href="index.html">Home</a></li>
                 <li> <a href="cadastro.html">Cadastro</a></li>
                 <li> <a href="login.html">Login</a></li>
             </ul>
@@ -155,7 +155,7 @@
             mensagem_erro.innerHTML = "O email deve conter @ e ponto"
             finalizarAguardar();
             return false;
-        } else if (senhaVar.length <= 6) {
+        } else if (senhaVar.length < 6) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "A senha deve ter no mínimo 6 caracteres"
             finalizarAguardar();
