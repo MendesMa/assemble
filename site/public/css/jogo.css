@@ -36,13 +36,19 @@ body {
 }
 
 
+
+.container a{
+    text-decoration: none;
+}
+
 .navegacao {
     display: flex;
-    width: 300px;
+    width: 100px;
     align-items: center;
     list-style: none;
+
+    text-decoration: none;
     justify-content: space-between;
-    list-style: none;
 }
 
 .navegacao li,
@@ -52,6 +58,10 @@ body {
 }
 
 
+.fundo {
+    display: flex;
+    flex-direction: column;
+}
 
 .fundo .container {
     margin-top: 20px;
@@ -73,7 +83,6 @@ body {
 .caixaImagens{
     display: flex;
     flex-direction: row;
-    margin-top: 5px;
 }
 
 .caixaImagens2{
@@ -88,7 +97,7 @@ body {
 }
 
 .caixa{
-    padding: 3px;
+    padding: 1px;
     
 }
 
@@ -97,8 +106,52 @@ body {
     height: 160px;
 }
 
-button {
-    border: 0;
+.botaoValidar {
+    color: white;
+    align-self: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 2px solid #48147d;
+    border-radius:15px ;
+    height: 30px;
+    width: 90px;
+    background-color: #69526E;
+    cursor: pointer;
+    transition-duration: 2s;
+    
+}
+
+.botaoValidar:hover {
+    background-color: #48147d;
+    color: white;
+    transform: scale(1.2)
+}
+
+
+
+
+.filmes {
+    color: white;
+    border: 1px;
     background: none;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.filmes:hover {
+border: 1px #18B8FD;
+color: white;
+transform: scale(1.2)
+}
+
+#div_estalo {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px) brightness(0.5);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 99;
     
 }

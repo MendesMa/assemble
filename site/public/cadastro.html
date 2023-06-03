@@ -29,7 +29,9 @@
 
     <!-- fundo -->
     <div class="fundo">
-        <div class="container"></div>
+        <div class="container">
+            
+        </div>
         <div class="caixa">
             <div class="frase"><h3>Cadastro</h3></div>
             Usuário: <br>
@@ -41,15 +43,17 @@
             Senha: <br>
             <input id="input_senha" type="password">
             <div id="div_senha"></div> <br>
-            
             <div id="div_aguardar" class="loading-div">
             </div>
-            <div class="alerta_erro">
-                <div class="card_erro" id="cardErro">
-                    <span id="mensagem_erro"></span>
-                </div>
-                <button onclick="cadastrar()">Cadastrar</button>
+            Confirmar senha: <br>
+            <input id="input_confirmar_senha" type="password">
+            <div id="div_senha"></div> <br>
+            <div id="div_aguardar" class="loading-div">
             </div>
+            <div class="card_erro" id="cardErro">
+                <span id="mensagem_erro"></span>
+            </div>
+            <button onclick="cadastrar()">Cadastrar</button>
         </div>
     </div>
 
@@ -60,30 +64,7 @@
             <div class="direitos">MendesMa 2023/1</div>
         </div>
     </div>
-    <!--header inicio-->
-   <!--  <link rel="stylesheet" href="game.html">  -->
-    <!-- <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-                <li class="agora">
-                    <a href="#">Cadastro</a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
-    <!--header fim-->
-
+    
 
     <!-- <div class="login">
         <div class="alerta_erro">
@@ -142,43 +123,42 @@
 
 <script>
     function cadastrar() {
-        aguardar();
-
+        
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
         var usuarioVar = input_usuario.value;
         var emailVar = input_email.value;
         var senhaVar = input_senha.value;
+        var confirmacaoSenhaVar = input_confirmar_senha.value
+        var confirmacao = true
 
         if (!emailVar.includes("@", ".")) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "O email deve conter @ e ponto"
-            finalizarAguardar();
-            return false;
+            setInterval(sumirMensagem, 5000)
+            confirmacao = false
         } else if (senhaVar.length < 6) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "A senha deve ter no mínimo 6 caracteres"
-            finalizarAguardar();
-            return false;
+            setInterval(sumirMensagem, 5000)
+            confirmacao = false
         } else if (confirmacaoSenhaVar != senhaVar) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "A confirmação da senha está errada "
-            finalizarAguardar();
-            return false;
-         if (usuarioVar == "" || emailVar == "" || senhaVar == "" ) {
+            setInterval(sumirMensagem, 5000)
+            confirmacao = false
+        } else if (usuarioVar == "" || emailVar == "" || senhaVar == "" ) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Preencha os campos)";
-            finalizarAguardar();
-            return false;
-        }  
-        else {
             setInterval(sumirMensagem, 5000)
-        }
-
+            confirmacao = false
+        }  
         // Enviando o valor da nova input
-        fetch("/usuarios/cadastrar", {
+        
+        if(confirmacao == true) {
+            fetch("/usuarios/cadastrar", {
             method: "POST",
-            headers: {
+            headers: {  
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
@@ -187,6 +167,7 @@
                 nomeServer: usuarioVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar
+            
             })
         }).then(function (resposta) {
 
@@ -196,20 +177,19 @@
                 cardErro.style.display = "block";
 
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
+                console.log('oi')
                 setTimeout(() => {
                     window.location = "login.html";
                 }, "2000")
 
-                limparFormulario();
-                finalizarAguardar();
+
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
         });
+        }
 
         return false;
     }
@@ -217,5 +197,5 @@
     function sumirMensagem() {
         cardErro.style.display = "none"
     }
-    }
+    
 </script>

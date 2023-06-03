@@ -9,6 +9,7 @@ body {
 /*header*/
 .header {
     backdrop-filter: brightness(60%);
+    background: none;
     border-bottom: 2px solid #98413C;
     margin: 0;
     height: 50px;
@@ -19,6 +20,7 @@ body {
     display: flex;
     width: 80%;
     margin: auto;
+    
 
 }
 
@@ -33,6 +35,10 @@ body {
     align-items: center;
     margin-top: 10px;
     
+}
+
+.container a{
+    text-decoration: none;
 }
 
 

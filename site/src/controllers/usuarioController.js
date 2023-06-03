@@ -96,9 +96,80 @@ function cadastrar(req, res) {
     }
 }
 
+function conferir(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUser = req.params.idUser;
+    var qtdFilmes = req.params.qtd;
+
+    
+
+    // Faça as validações dos valores
+    /* if (usuario == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } 
+    else { */
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.conferir(idUser, qtdFilmes)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+/* }*/
+function buscarDadosFilmes(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+
+
+    
+
+    // Faça as validações dos valores
+    /* if (usuario == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } 
+    else { */
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.buscarDadosFilmes()
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    conferir,
+    buscarDadosFilmes
 }

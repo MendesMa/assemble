@@ -20,7 +20,7 @@
         <div class="container">
             <h1 class="nome">Assemble</h1>
             <ul class="navegacao">
-                <li> <a href="home.html">Home</a></li>
+                <li> <a href="index.html">Home</a></li>
                 <li> <a href="cadastro.html">Cadastro</a></li>
                 <li> <a href="login.html">Login</a></li>
             </ul>
@@ -31,7 +31,7 @@
     <div class="fundo">
         <div class="container"></div>
         <div class="caixa">
-            <div class="frase"><h3>Cadastro</h3></div>
+            <div class="frase"><h3>Login</h3></div>
             E-mail: <br>
             <input id="email_input" type="text"> <br>
             Senha: <br>
@@ -174,12 +174,12 @@
                     console.log(JSON.stringify(json));
 
                     sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                 /*    sessionStorage.ID_USUARIO = json.id; */
+                    sessionStorage.NOME_USUARIO = json.usuario;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
                     /* sessionStorage.CPF_USUARIO = json.cpf; */
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "jogo.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

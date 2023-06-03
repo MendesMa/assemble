@@ -34,6 +34,10 @@ body {
     
 }
 
+.container a{
+    text-decoration: none;
+}
+
 
 .navegacao {
     display: flex;
@@ -60,8 +64,8 @@ body {
     border-radius: 10px;
     padding: 30px;
     width: 170px;
-    height: 320px;
-    margin: 90px 500px 80px 200px;
+    height: 350px;
+    margin: 60px 500px 60px 200px;
     align-content: center;
 }
     
@@ -79,19 +83,31 @@ input {
 }
 
 button {
+
     align-self: center;
     margin-top: 25px;
-    border: 0;
+    border: 2px solid #48147d ;
     border-radius:15px ;
     height: 30px;
     width: 90px;
     background-color: #69526E;
     color: white;
-
+    cursor: pointer;
+    transition-duration: 2s;
 }
 
 
+button:hover {
+background-color: #48147d;
+color: white;
+transform: scale(1.2)
+}
 
+
+.card_erro{
+    color: white;
+    background-color: #69526E;
+}
 
 
 /*footer*/

@@ -3,6 +3,7 @@ body {
     padding: 0;
     background-image: url(../assets/imagens/cadastro-login.jpg);
     background-size: 100%;
+    background-color: #69526E;
 }
 
 /*header*/
@@ -32,6 +33,10 @@ body {
     align-items: center;
     margin-top: 10px;
     
+}
+
+.container a{
+    text-decoration: none;
 }
 
 
@@ -82,14 +87,34 @@ input {
 
 button {
     align-self: center;
-    margin-top: 20px;
-    border: 0;
+    margin-top: 25px;
+    border: 2px solid #48147d;
     border-radius:15px ;
     height: 30px;
     width: 90px;
     background-color: #69526E;
     color: white;
+    cursor: pointer;
+    transition-duration: 2s;
+    
 }
+
+button:hover {
+    background-color: #48147d;
+    color: white;
+    transform: scale(1.2)
+  }
+
+/* .button01{
+    background-image: linear-gradient(to left, #911515 40%, rgb(8, 8, 83) 60%, #16076b );
+    color: white;
+    border-radius: 10px;
+    width: 8vw;
+    height: 6vh;
+    cursor: pointer;
+    border: 2px solid white;
+    transition-duration: 2s;
+  } */
 
 
 
