@@ -39,7 +39,7 @@ body{
 
 .navegacao {
     display: flex;
-    width: 100px;
+    width: 150px;
     align-items: center;
     list-style: none;
 
@@ -75,20 +75,20 @@ body{
     height: 50px;
     align-items: center;
     margin-top: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 
 .grafico{
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 5px;
     width: 920px;
     height: 450px;
     margin-left: 190px;
     border-radius: 10px;
     list-style: none;
-    background-color: rgba(173, 216, 230, 0.473);
+    background-color: rgba(173, 216, 230, 0.842);
 }
 

@@ -43,7 +43,7 @@ body {
 
 .navegacao {
     display: flex;
-    width: 100px;
+    width: 150px;
     align-items: center;
     list-style: none;
 
